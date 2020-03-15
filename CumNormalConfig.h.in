@@ -1,0 +1,3 @@
+// the configured options and settings for CumNormal
+#define CumNormal_VERSION_MAJOR @CumNormal_VERSION_MAJOR@
+#define CumNormal_VERSION_MINOR @CumNormal_VERSION_MINOR@
