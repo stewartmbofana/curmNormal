@@ -11,13 +11,13 @@
 #define DECLSPEC
 #endif
 
-namespace trivar
+namespace univar
 {
-double cumnorm(double x);
-double cumnorm6(double x);
-double NPrime(double x);
-double NPrimePrime(double x);
-double CumNormInverse(double y);
+double DECLSPEC cumnorm(double x);
+double DECLSPEC cumnorm6(double x);
+double DECLSPEC NPrime(double x);
+double DECLSPEC NPrimePrime(double x);
+double DECLSPEC CumNormInverse(double y);
 } // namespace trivar
 
 #endif

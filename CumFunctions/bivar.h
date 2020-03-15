@@ -18,4 +18,4 @@ namespace bivar
 double DECLSPEC bivarcumnorm(double x, double y, double rho);
 }
 
-#endif;
+#endif

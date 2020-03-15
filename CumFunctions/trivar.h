@@ -19,4 +19,4 @@ namespace trivar
 double DECLSPEC trivarcumnorm(double x, double y, double z, double correl12, double correl13, double correl23);
 }
 
-#endif;
+#endif

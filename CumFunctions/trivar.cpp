@@ -21,7 +21,7 @@ double pntgnd(double ba, double bb, double bc, double ra, double rb, double r, d
 			pnt = exp(-ft / 2);
 			if (bt < 10)
 			{
-				pnt = pnt * cumnorm(bt);
+				pnt = pnt * univar::cumnorm(bt);
 			}
 		}
 	}
@@ -142,15 +142,15 @@ double trivarcumnorm(double x, double y, double z, double correl12, double corre
 	}
 	else if (fabs(correlation[2][1]) + fabs(correlation[3][1]) < epsilon)
 	{
-		TVCN = cumnorm(limit[1]) * bivar::bivarcumnorm(limit[2], limit[3], correlation[3][2]);
+		TVCN = univar::cumnorm(limit[1]) * bivar::bivarcumnorm(limit[2], limit[3], correlation[3][2]);
 	}
 	else if (fabs(correlation[3][1]) + fabs(correlation[3][2]) < epsilon)
 	{
-		TVCN = cumnorm(limit[3]) * bivar::bivarcumnorm(limit[1], limit[2], correlation[2][1]);
+		TVCN = univar::cumnorm(limit[3]) * bivar::bivarcumnorm(limit[1], limit[2], correlation[2][1]);
 	}
 	else if (fabs(correlation[2][1]) + fabs(correlation[3][2]) < epsilon)
 	{
-		TVCN = cumnorm(limit[2]) * bivar::bivarcumnorm(limit[1], limit[3], correlation[3][1]);
+		TVCN = univar::cumnorm(limit[2]) * bivar::bivarcumnorm(limit[1], limit[3], correlation[3][1]);
 	}
 	else if (1 - correlation[3][2] < epsilon)
 	{
@@ -169,7 +169,7 @@ double trivarcumnorm(double x, double y, double z, double correl12, double corre
 	}
 	else
 	{
-		TVCN = bivar::bivarcumnorm(limit[2], limit[3], correlation[3][2]) * cumnorm(limit[1]);
+		TVCN = bivar::bivarcumnorm(limit[2], limit[3], correlation[3][2]) * univar::cumnorm(limit[1]);
 		double A[11];
 		double B[11];
 		double kf[11];

@@ -73,7 +73,7 @@ double bivarcumnorm(double x, double y, double correlation)
 			}
 			BVN = BVN * asr * 0.795774715459476678e-1;
 		}
-		BVN = BVN + cumnorm(-h) * univar::cumnorm(-k);
+		BVN = BVN + univar::cumnorm(-h) * univar::cumnorm(-k);
 	}
 	else
 	{
@@ -118,7 +118,7 @@ double bivarcumnorm(double x, double y, double correlation)
 		}
 		if (correlation > 0)
 		{
-			BVN = BVN + univar::cumnorm(-max(h, k));
+			BVN = BVN + univar::cumnorm(-utilities::max(h, k));
 		}
 		else
 		{

@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
 			double x;
 			cin >> x;
 			cout << setprecision(6) <<"The value of N(" << x << ") is " 
-				<< setprecision(20) << cumnorm(x) << endl;
+				<< setprecision(20) << univar::cumnorm(x) << endl;
 		}
 	else if (dim == 2)
 		{
@@ -41,7 +41,7 @@ int main(int argc, char* argv[])
 			cin >> x >> y >> rho;
 			cout << setprecision(6) 
 				<< "The value of N_2(" << x << "," << y << "," << rho << ") is " 
-				<< setprecision(20) << bivarcumnorm(x,y,rho) << endl;
+				<< setprecision(20) << bivar::bivarcumnorm(x,y,rho) << endl;
 		}
 	else if (dim == 3)
 		{
@@ -55,7 +55,7 @@ int main(int argc, char* argv[])
 			cout << setprecision(6) 
 				<< "The value of N_3(" << x << "," << y << "," << z << "," << rho12 << "," 
 				<< rho13 << "," << rho23 << ") is " << setprecision(20) 
-				<< trivarcumnorm(x,y,z,rho12,rho13,rho23) << endl;
+				<< trivar::trivarcumnorm(x,y,z,rho12,rho13,rho23) << endl;
 		}
 	
 	cout << "Press any key, and then return, to end" << endl;
